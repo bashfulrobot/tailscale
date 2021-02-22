@@ -2,7 +2,8 @@
 # handlers file for tailscale
 
 #  For future if I can automate authentiction
-# - name: enable tailscale
-#   become: yes
-#   command: tailscale up
-#   register: tailscaleup
+- name: enable tailscale
+  become: yes
+  command: tailscale up -authkey {{ TAILSCALE_KEY }}
+  register: tailscaleup
+  when: TAILSCALE_KEY is defined
