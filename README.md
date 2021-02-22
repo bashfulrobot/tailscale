@@ -2,9 +2,11 @@
 
 ## About
 
-*** This  was generated automatically. ***
+***IN DEV***
 
-tailscale has only had the initial commit, so this document is a work in progress.
+* Docs and code incomplete.
+
+A personal Ansible role to install Tailscale on Ubuntu systems.
 
 ## Getting Started
 
@@ -29,4 +31,3 @@ Dustin Krysak
 ## Credits
 
 If derived from other works, give credit to the authors.
-
