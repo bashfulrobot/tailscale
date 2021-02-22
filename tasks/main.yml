@@ -18,5 +18,5 @@
   apt:
     name: tailscale
     state: present
-    notify:
-        - enable tailscale
+  notify:
+    - enable tailscale
