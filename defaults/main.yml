@@ -1,9 +1,9 @@
 ---
 # defaults file for tailscale
 
-# setup Ubuntu firewall rules
+# enable UFW and setup tailscale related rules
 TAILSCALE_UFW_ENABLE: false
-# if UFW: true, do you want to allow ssh access over tailscale
+# if UFW: true, do you want to allow ssh access over the tailscale0 interface?
 TAILSCALE_SSH_ENABLE: false
-# change sss port on tailscale interface
+# If you changed the default ssh port on your system, allow that port access on the tailscale0 interface
 TAILSCALE_SSH_PORT: 22

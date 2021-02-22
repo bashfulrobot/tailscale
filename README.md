@@ -20,7 +20,22 @@ Describe any dependencies tailscale will need.
 
 ## Usage
 
-Describe how to use tailscale.
+### Options
+
+#### UFW
+
+This role allows a few options for your firewall as it pertains to Tailscale.
+
+Defaults are set as below.
+
+```yaml
+# enable UFW and setup tailscale related rules
+TAILSCALE_UFW_ENABLE: false
+# if UFW: true, do you want to allow ssh access over the tailscale0 interface?
+TAILSCALE_SSH_ENABLE: false
+# If you changed the default ssh port on your system, allow that port access on the tailscale0 interface
+TAILSCALE_SSH_PORT: 22
+```
 
 ## License
 
