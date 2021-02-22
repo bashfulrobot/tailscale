@@ -2,11 +2,13 @@
 # tasks file for tailscale
 
 - name: add tailscale apt signing keys
+  become: yes
   apt_key:
     url: https://pkgs.tailscale.com/stable/ubuntu/{{ ansible_distribution_release }}.gpg
     state: present
 
 - name: add tailscale ppa
+  become: yes
   apt_repository:
     repo: deb https://pkgs.tailscale.com/stable/ubuntu {{ ansible_distribution_release }} main
     state: present
