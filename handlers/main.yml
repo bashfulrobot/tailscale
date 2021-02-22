@@ -4,3 +4,4 @@
 - name: enable tailscale
   become: yes
   command: tailscale up
+  register: tailscaleup
