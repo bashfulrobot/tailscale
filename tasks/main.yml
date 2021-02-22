@@ -16,8 +16,7 @@
 - name: installing tailscale
   become: yes
   apt:
-    pkg:
-      - tailscale
+    name: tailscale
     state: present
     notify:
         - enable tailscale
