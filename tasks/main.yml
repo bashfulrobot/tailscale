@@ -20,3 +20,8 @@
     state: present
   notify:
     - enable tailscale
+
+- name: import ufw tasks
+  include_tasks: "ufw.yml"
+  when:
+    - TAILSCALE_UFW_ENABLE

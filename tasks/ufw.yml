@@ -1,0 +1,18 @@
+- name: enable ufw for tailscale
+  ufw:
+    state: enabled
+
+- name: allowing tailscale port 41641/udp
+  ufw:
+    rule: allow
+    port: '41641'
+    proto: udp
+
+- name: allowing ssh access on tailscale port "{{ TAILSCALE_SSH_PORT }}"/tcp
+  ufw:
+    rule: allow
+    interface: tailscale0
+    port: "{{ TAILSCALE_SSH_PORT }}"
+    proto: tcp
+  when:
+    - TAILSCALE_SSH_ENABLE
