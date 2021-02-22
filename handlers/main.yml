@@ -1,2 +1,6 @@
 ---
 # handlers file for tailscale
+
+- name: enable tailscale
+  become: yes
+  command: tailscale up
